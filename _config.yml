@@ -1,10 +1,1 @@
-auto: true
-
-markdown: rdiscount
-pygments: true
-paginate: 8
-permalink: /:title
-
-title: BeiYuu.com
-url: zhanghs.com
-author_info: <a href="http://beiyuu.com/">BeiYuu</a>
+baseurl: /zhanghs
