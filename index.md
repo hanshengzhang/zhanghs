@@ -1,8 +1,27 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" type="text/css" href="css/pygments.css" />
-dsfasd  中国人
-{% highlight c %}
-int a = 5;
-{% endhighlight %}
+##Personal Information
+张汉生<br/>
+Last Name: Zhang . First Name:Hansheng<br/>
+Master degree candidate at school of Electronice Engineerring and Computer Science, Peking University, China.
+
+##Education
+
+-	2008.9-2012.6 Computer Science, <a href ="http://eecs.pku.edu.cn/eecs_english/aboutUs.shtml">school of Electronics Engineering and Computer Science</a>, <a href = "http://english.pku.edu.cn/">Peking University</a>
+-	2012.9-? Computer Software and Theory, <a href="http://eecs.pku.edu.cn/eecs_english/aboutUs.shtml">school of Electronics Engineering and Computer Science</a>,<a href="http://english.pku.edu.cn/">Peking University</a>
+
+&nbsp;
+
+##Internship and Employment
+
+-	2012.5-2012.8 Internship at IBM China Development Lab
+-	2013.2-2013.6 Teaching Assistant For <i>Design and Analysis of Algorithms</i>
+
+&nbsp;
+
+##More
+
+- <a href="http://i.pku.edu.cn/trac/bazinga">Bazinga Tank</a> is a game of tanks' war. It is similar to  Battle City and coded in java
+- <a href="http://www.cnblogs.com/zhanghs/category/456573.html">My Solutions</a> for the problems on <a href="http://leetcode.com/onlinejudge">Leet Code Online Judgement
+
