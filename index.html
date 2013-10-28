@@ -1,5 +1,14 @@
-<html>
-<body>
-skdflksdfjksdlfjiweflksdjf isdfjlsdfjlk
-</body>
-</html>
+---
+layout: default
+title: 我的Blog
+---
+<link rel="stylesheet" href="/your/path/pygments.css">
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+  {% for post in site.posts %}
+  <li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% highlight c %}
+{% endhighlight %}
