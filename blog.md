@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Hansheng's Blog
 ---
 <ul>
 {% for post in site.posts %}

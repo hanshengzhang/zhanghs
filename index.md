@@ -22,6 +22,6 @@ Master degree candidate at school of Electronice Engineerring and Computer Scien
 
 ##More
 
-- <a href="http://i.pku.edu.cn/trac/bazinga">Bazinga Tank</a> is a game of tanks' war. It is similar to  Battle City and coded in java
-- <a href="http://www.cnblogs.com/zhanghs/category/456573.html">My Solutions</a> for the problems on <a href="http://leetcode.com/onlinejudge">Leet Code Online Judgement
+-	<a href="http://i.pku.edu.cn/trac/bazinga">Bazinga Tank</a> is a game of tanks' war. It is similar to  Battle City and coded in java
+-	<a href="http://www.cnblogs.com/zhanghs/category/456573.html">My Solutions</a>for the problems on <a href=”http://leetcode.com/onlinejudge">Leet Code Online Judgement</a>
 

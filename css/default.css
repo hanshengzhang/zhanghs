@@ -185,7 +185,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 @media (max-width: 1300px){
     .home-menu { position:absolute; }
 }
-.site {
+.mainPage {
     font-size: 110%;
     text-align: justify;
     width: 70%;
@@ -200,22 +200,54 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     margin-bottom: 2em;
 }
 
-.site .title a {
-	font-size: 35px;
+.mainPage .title a {
+	font-size: 30px;
     color: #a00;
     text-decoration: none;
 }
 
-.site .title a:hover {
+.mainPage .title a:hover {
     color: black;
   }
 
-.site .title a.extra {
+.mainPage .title a.extra {
     color: #aaa;
     text-decoration: none;
-    margin-left: 1em;
+    margin-right: 1em;
 }
 
-.site .title a.extra:hover {
+.mainPage .title a.extra:hover {
     color: black;
+}
+
+div#leftPage {
+    width: 25%;
+    margin: 3em auto 2em auto;
+    float: left;
+	text-align:center;
+}
+div#site {
+    float: left;
+    width: 100%;
+}
+div#recentposts{
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    font-size:10px;
+    color:#000;
+    background-color:#eef;
+    border-radius:10px;
+    padding:10px;
+    text-align:left;
+    margin-top: 15px;
+}
+div#recentposts li{
+	font-size:13px;
+}
+div#recentposts h3 {
+    text-transform:uppercase;
+    color:#000000;
+    margin:0;
+    font-size:1.1em;
 }
