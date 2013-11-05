@@ -3,36 +3,41 @@ layout: default
 ---
 {{content}}
 <div id="disqus_container">
-	<a  href="#" onclick="expandDisqus();return false" id="hint" style="font-size:20px">Show Comments</a>
+	<a  href="#" onclick="expandDisqus();return false" id="hint" style="font-size:20px">Show/Add Comments</a>
 	<div id="disqus_thread" style="display:none"></div>
-	<script type="text/javascript">
-		var firstExpanded=1;
-		var expended = 0;
-		function expandDisqus(){
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-			if ( expended==0){
-				if (firstExpanded==1){
-					var disqus_shortname = 'zhanghs'; // required: replace example with your forum shortname
-					var disqus_identifier = '{{page.id}}';
-					/* * * DON'T EDIT BELOW THIS LINE * * */
-					(function() {
+	<div id="disqus_loader">
+		<script type="text/javascript">
+			var firstExpanded=1;
+			var expended = 0;
+			function expandDisqus(){
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				if ( expended==0){
+					disqus_thread.style.display="";
+					if (firstExpanded==1){
+						var disqus_shortname = 'zhanghs'; // required: replace example with your forum shortname
+						var disqus_identifier = '{{page.id}}';
 						hint.innerHTML='Waiting...';
-						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					})();
+						/* * * DON'T EDIT BELOW THIS LINE * * */
+						//(function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.addEventListener("load", function(){hint.innerHTML="Hide Comments";});
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							var ldr = document.getElementById('disqus_loader');
+							ldr.parentNode.removeChild(ldr);
+						//})();
+					}
+					else hint.innerHTML='Hide Comments';
+					firstExpanded = 0;
+					expended = 1;
 				}
-				firstExpanded = 0;
-				expended = 1;
-				hint.innerHTML='Hide Comments';
-				disqus_thread.style.display="";
+				else {
+					expended = 0;
+					hint.innerHTML='Show/Add Comments';
+					disqus_thread.style.display="none";
+				}
 			}
-			else {
-				expended = 0;
-				hint.innerHTML='Show Comments';
-				disqus_thread.style.display="none";
-			}
-		}
-    </script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
 </div>
