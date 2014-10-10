@@ -1,4 +1,4 @@
-pygments: true
+highlighter: rouge
 mardown: redcloth
 markdown: rdiscount
 title: Zhang Hansheng
