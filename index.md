@@ -16,9 +16,9 @@ Master degree candidate @ School of Electronice Engineerring and Computer Scienc
 -	&bull; 2013.2-2013.6 Teaching Assistant for <i>Design and Analysis of Algorithms</i>
 -	&bull; 2012.5-2012.8 Internship @ IBM China Development Lab
 ##Awards
-- &bull; 2009 May Fourth Scholarships, Peking University
-- &bull; 2011 Third-class prize of Program Design Contest, Peking University
 - &bull; 2011 Outstanding Member of Tecent Invocation Club
+- &bull; 2011 Third-class prize of Program Design Contest, Peking University
+- &bull; 2009 May Fourth Scholarships, Peking University
 ##More
 -	&bull; <a href="http://i.pku.edu.cn/trac/bazinga">Bazinga Tank</a> is a game of tanks' war. It is similar to  Battle City and coded in java
 -	&bull; <a href="https://github.com/landhero/leetcode">My Solutions</a> for the problems on <a href="http://oj.leetcode.com/problems/">Leet Code Online Judgement</a>
