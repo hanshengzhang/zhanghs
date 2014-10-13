@@ -1,5 +1,6 @@
 ---
 layout: post
+category: other
 title: 《天龙八部》读后感
 ---
 #《天龙八部》读后感
