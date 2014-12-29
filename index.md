@@ -9,7 +9,7 @@ Master degree candidate @ School of Electronice Engineerring and Computer Scienc
 ##Education
 -	&bull; 2012.9-2015.7 (expected) Computer Software and Theory, <a href="http://eecs.pku.edu.cn/eecs_english/aboutUs.shtml">School of Electronics Engineering and Computer Science</a>, <a href="http://english.pku.edu.cn/">Peking University</a>
 -	&bull; 2009.9-2012.6 Economics Double Major, <a href ="http://en.nsd.edu.cn/">National School of Development</a>, <a href = "http://english.pku.edu.cn/">Peking University</a>
--	&bull; 2008.9-2012.6 Computer Science, <a href ="http://eecs.pku.edu.cn/eecs_english/aboutUs.shtml">school of Electronics Engineering and Computer Science</a>, <a href = "http://english.pku.edu.cn/">Peking University</a>
+-	&bull; 2008.9-2012.6 Computer Science, <a href ="http://eecs.pku.edu.cn/eecs_english/aboutUs.shtml">School of Electronics Engineering and Computer Science</a>, <a href = "http://english.pku.edu.cn/">Peking University</a>
 ##Internship and Employment
 -	&bull; 2014.6-2014.8 Internship @ <a href="http://nie.163.com/en/">Netease Games</a>
 -	&bull; 2013.9-2014.5 President of Tecent Innovation Club, Peking University
