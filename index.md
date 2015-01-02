@@ -20,3 +20,5 @@ Master degree candidate @ School of Electronice Engineerring and Computer Scienc
 - &bull; 2011 Outstanding Member of Tecent Invocation Club
 - &bull; 2011 Third-class prize of Program Design Contest, Peking University
 - &bull; 2009 May Fourth Scholarships, Peking University
+##More
+- &bull; [Yingfei Xiong](http://sei.pku.edu.cn/~xiongyf04/), [**Hansheng Zhang**](http://www.zhanghs.com), [Arnaud Hubaux](Arnaud Hubaux), [Steven She](http://gsd.uwaterloo.ca/shshe), Jie Wang, [Krzysztof Czarnecki](http://gsd.uwaterloo.ca/kczarnec/). **Range Fixes: Interactive Error Resolution for Software Configuration.** IEEE Transactions on Software Engineering, December 2014. [[DOI]](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6991616)
