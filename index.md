@@ -22,6 +22,7 @@ Master degree candidate @ School of Electronice Engineerring and Computer Scienc
 - &bull; 2011 Outstanding Member of Tecent Invocation Club
 - &bull; 2011 Third-class prize of Program Design Contest, Peking University
 - &bull; 2009 May Fourth Scholarships, Peking University
-##More
-- &bull; [Yingfei Xiong](http://sei.pku.edu.cn/~xiongyf04/), [**Hansheng Zhang**](http://www.zhanghs.com), [Arnaud Hubaux](http://www.ahubaux.com/), [Steven She](http://gsd.uwaterloo.ca/shshe), Jie Wang, [Krzysztof Czarnecki](http://gsd.uwaterloo.ca/kczarnec/). **Range Fixes: Interactive Error Resolution for Software Configuration.** IEEE Transactions on Software Engineering, December 2014. [[DOI]](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6991616)
+##Publications
 - &bull; Qing Gao, **Hansheng Zhang**, Jie Wang, [Yingfei Xiong](http://sei.pku.edu.cn/~xiongyf04/index.html), [Lu Zhang](http://sei.pku.edu.cn/~zhanglu/), [Hong Mei](http://sei.pku.edu.cn/~meih/index_en.html). **Fixing Recurring Crash Bugs via Analyzing Q&A Sites**. ASE'15: 30th IEEE/ACM International Conference on Automated Software Engineering, November 2015.
+- &bull; [Yingfei Xiong](http://sei.pku.edu.cn/~xiongyf04/), [**Hansheng Zhang**](http://www.zhanghs.com), [Arnaud Hubaux](http://www.ahubaux.com/), [Steven She](http://gsd.uwaterloo.ca/shshe), Jie Wang, [Krzysztof Czarnecki](http://gsd.uwaterloo.ca/kczarnec/). **Range Fixes: Interactive Error Resolution for Software Configuration.** IEEE Transactions on Software Engineering, December 2014. [[DOI]](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6991616)
+
