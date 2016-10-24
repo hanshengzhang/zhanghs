@@ -1,4 +1,11 @@
 div.highlight{ margin-top: 25px }
+figure.highlight {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
 .hll { background-color: #ffffcc }
 .c { color: #60a0b0; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
