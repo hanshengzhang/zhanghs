@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Hansheng's Blog
+title: YSCG的个人博客
+navigation_title: Blog
+navigation_weight: 2
 ---
 <script src="tabcontent.js" type="text/javascript"></script>
 
@@ -14,22 +16,22 @@ title: Hansheng's Blog
 </ul>
 <div class="tabcontents">
 	<div id="all_blog">
-	<ul>	
+	<ul>
 	{% for post in site.posts limits:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
 	</div>
 	<div id="tech">
-	<ul>	
+	<ul>
 	{% for post in site.categories.tech limits:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
 	</div>
-	
+
 	<div id="other">
-	<ul>	
+	<ul>
 	{% for post in site.categories.other limits:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}

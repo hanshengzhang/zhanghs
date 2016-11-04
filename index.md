@@ -1,5 +1,8 @@
 ---
 layout: default
+navigation_weight: 1
+navigation_title: Home
+title: YSCG的个人主页
 ---
 
 ## Personal Information

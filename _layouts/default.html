@@ -4,27 +4,25 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="/css/default.css" type="text/css" />
 	<link rel="stylesheet" href="/css/pygments_yscg.css" type="text/css"/>
-	<title>{% if page.title %}{{page.title}} {% else %} {{site.title}} {% endif %}</title>
+	<title>{% if page.title %} {{page.title}} {% else %} {{site.title}} {% endif %}</title>
 </head>
 <body>
 <div id="site">
-	<div id="leftPage" style="max-width:230px">
-		<img style="margin-left:auto; margin-right:auto; width:95%; max-width:180px" src="/images/zhs.jpg"/>
-		<div id="recentposts">
-		<h3>Recent posts</h3>
-		<ul class="posts">
-			{% for post in site.posts limit:5 %}
-			<li>&raquo; <a href="{{post.url}}">{{ post.title }}</a></li>
-			{% endfor %}
-			<li>&raquo; <a href="/blog.html">More...</a></li>
-		</ul>
-      </div>
-	</div>
+	<nav class="main-nav">
+  <ul class="main-nav-ul">
+    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+    {% for p in navigation_pages %}
+      {% if p.navigation_weight %}
+        <li class="main-nav-item">
+          <a href="{{ p.url }}" {% if p.url == page.url %} class="nav-active" {% else %} class = "nav-normal"{% endif %}>
+            {{ p.navigation_title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
 	<div class="mainPage">
-		<div class="title">
-			<a class="extra" href="/">Home</a>
-			<a class="extra" href="/blog.html">Blog</a>
-		</div>
 		{{ content }}
 	</div>
 </div>
