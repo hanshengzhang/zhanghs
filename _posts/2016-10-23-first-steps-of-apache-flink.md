@@ -14,6 +14,7 @@ title: Apache Flink的初步试用
 * Flink的任务异常恢复与任务重启的测试
 
 <!--snapshot-->
+
 ## 在YARN上部署一个Flink集群
 
 Flink集群的部署方式有很多种，本文选取了在YARN的部署方式。
