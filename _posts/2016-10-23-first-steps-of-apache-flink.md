@@ -4,8 +4,6 @@ category: tech
 title: Apache Flink的初步试用
 ---
 
-# Apache Flink的初步调研
-
 [Apache Flink](http://flink.apache.org)是一个开源的支持大规模流式或批量数据处理的平台。
 上周有段时间调研了一下Flink，看了一下官方文档和部分代码，重点是研究了下Checkpointing机制。
 然而其中的技术细节比较多，作为一个初步调研，本文还是希望通过几个简单的例子，来说明如何将Flink使用起来。
@@ -15,6 +13,7 @@ title: Apache Flink的初步试用
 * 如何使用Flink消费Kafka上的数据
 * Flink的任务异常恢复与任务重启的测试
 
+<!--snapshot-->
 ## 在YARN上部署一个Flink集群
 
 Flink集群的部署方式有很多种，本文选取了在YARN的部署方式。

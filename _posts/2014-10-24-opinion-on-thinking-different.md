@@ -4,7 +4,6 @@ category: other
 title: 怎么看 "Think Different"
 ---
 
-# 怎么看 "Think Different"
 Think Different当然很早就听过，但是之前一直没有深入的去想过这个问题。结合最近所想，觉得把这两个单词分开看很有必要。
 
 ## 要有正确的关注点

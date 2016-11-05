@@ -1,6 +1,6 @@
 ---
 layout: default
-title: YSCG的个人博客
+title: Hansen先生的博客
 navigation_title: Blog
 navigation_weight: 2
 ---

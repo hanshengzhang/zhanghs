@@ -1,8 +1,8 @@
 ---
 layout: default
-navigation_weight: 1
-navigation_title: Home
-title: YSCG的个人主页
+navigation_weight: 3
+navigation_title: About
+title: Hansen先生
 ---
 
 ## Personal Information

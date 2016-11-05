@@ -10,6 +10,11 @@
 <div id="site">
 	<nav class="main-nav">
   <ul class="main-nav-ul">
+		<li class="main-nav-item">
+			<a href="/" {% if page.url == '/index.html' %} class="nav-active" {% else %} class = "nav-normal"{% endif %}>
+				Home
+			</a>
+		</li>
     {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
     {% for p in navigation_pages %}
       {% if p.navigation_weight %}

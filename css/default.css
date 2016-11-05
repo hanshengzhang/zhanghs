@@ -150,31 +150,50 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .home-menu { position:absolute; }
 }
 
+/** CSS for main navigation bar***/
 .main-nav-ul {
   padding-left: 1px;
   padding-top: 5px
 }
-
 li.main-nav-item {
   display: inline;
   color: ##f2f2f7;
 }
+.main-nav-item a {
+  padding-right: 5px;
+  font-size: 18px;
+  text-decoration: none;
+}
 .main-nav-item a.nav-active {
   color: #f5eded;
-  padding-right: 5px;
-  font-size: 18px;
+}
+.main-nav-item a.nav-normal {
+  color: #aab1bb;
+}
+.main-nav-item a.nav-normal:hover {
+  color: #f5eded;
 }
 
-.main-nav-item a.nav-normal {
-  font-size: 18px;
-  padding-right: 5px;
-  color: #aab1bb;
+/**CSS for page navigator**/
+#page-nav {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eff5eb;
+  margin-top: 30px;
+}
+#page-nav .prev {
+  float: left;
+}
+#page-nav .next {
+  float:right;
 }
 
 .mainPage {
     text-align: justify
     margin: 1em auto 1em auto;
     line-height: 1.5em;
+    max-width: 50em;
 }
 
 .title {
@@ -214,16 +233,10 @@ div.mainPage {
     color: black;
 }
 
-div#leftPage {
-    width: 20%;
-    margin: 3em auto 2em auto;
-    float: left;
-	text-align:center;
-}
 div#site {
     margin-left: auto;
     margin-right: auto;
-    width: 100  %;
+    width: 100%;
 }
 
 div#recentposts{
@@ -262,4 +275,18 @@ table, tr, td, th {
 }
 table {
   border-collapse: collapse;
+}
+div.snapshot-container {
+  background-color: #eff5eb;
+  margin-top: 30px;
+  padding-top: 5px;
+}
+a.alink {
+  color:black;
+  text-decoration: none;
+  outline: inherit;
+}
+
+a.alink:hover {
+  color:#928d8d;
 }

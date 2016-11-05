@@ -3,3 +3,5 @@ mardown: redcloth
 markdown: kramdown
 title: Zhang Hansheng
 permalink: /:year/:month/:day/:title
+paginate: 5
+paginate_path: "/page:num"
