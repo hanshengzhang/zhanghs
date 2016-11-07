@@ -15,7 +15,7 @@ title: Apache Flink的初步试用
 
 <!--snapshot-->
 
-## 在YARN上部署一个Flink集群
+# 在YARN上部署一个Flink集群
 
 Flink集群的部署方式有很多种，本文选取了在YARN的部署方式。
 测试的YARN集群是CDH版本的，为了避免以后可能出现的错误，笔者很自觉地从代码编译开始。
@@ -43,9 +43,9 @@ export HADOOP_CONF_DIR={Hadoop Configuration Directory}
 执行完上述命令后，点开ApplicationMaster的链接，可以看到一个Flink Dashboard。
 为了能够在后续提交任务到该集群，需要在这个Dashbord上找到并记录下JobManager对应的IP地址和端口号。
 
-## 使用Flink消费Kafka的消息
+# 使用Flink消费Kafka的消息
 
-### 连接Kafka并输出
+## 连接Kafka并输出
 
 Flink提供了FlinkKafkaConsumer08和FlinkKafkaConsumer09两个接口，分别用来从Apache Kafka 0.8.x和Apache Kafka 0.9.x拉取数据。
 此外，本文使用的是Scala 10对应的API，因此需要添加这两个依赖：flink-streaming-scala_2.10和flink-connector-kafka-0.8_2.10。
@@ -79,7 +79,7 @@ streamingEnv.execute("test kafka")
 # -m JobManager对应的host和port
 {% endhighlight %}
 
-### 使用Flink备份Kafka的Topic
+## 使用Flink备份Kafka的Topic
 
 接下来我们看一个稍微复杂一点的例子：使用Flink将Kafka中消息逐小时地备份到HDFS中。
 由于是直接备份消息，所以直接将消息地原始字节拿出来写入就行了，为此可以写一个简单的DeserializationSchema如下所示：
@@ -113,12 +113,12 @@ streamingEnv.addSource(kafkaConsumer)(BytesWritableDeserialization.getProducedTy
 streamingEnv.execute("kafka-backup")
 {% endhighlight %}
 
-## Flink任务的异常与恢复
+# Flink任务的异常与恢复
 
 Flink的Checkpointing机制能够不时的检查和保存Operator的状态。
 在任务恢复时，每个Operator都会从最近完成的一个Checkpoint中恢复到当时所保存的状态中。
 
-### 一个有状态的Operator的例子
+## 一个有状态的Operator的例子
 
 下面的例子实现了一个RichFlatMapFunction. 这个operator将每个输入转换成Int，然后将其加到一个状态中去。
 如果当前的和大于100，则将当前已经处理的事件个数和当前的和放到下一个阶段中去，然后将当前的和置为0。
@@ -146,7 +146,7 @@ object MaxThan100FlatMapper extends RichFlatMapFunction[String, (Long, Long)] wi
 }
 {% endhighlight %}
 
-### Operator产生异常时Job的恢复
+## Operator产生异常时Job的恢复
 
 首先，需要设定Checkpointing机制和重启策略。
 
@@ -176,7 +176,7 @@ override def restoreState(t: FTuple[Long, Long]): Unit = {
 
 经过测试，Job能够成功的从异常中恢复。
 
-### 人工重启任务
+## 人工重启任务
 
 Flink也提供了savepoint机制，以在人工重启Job的过程中，保存和恢复任务的状态。
 {%  highlight scala %}

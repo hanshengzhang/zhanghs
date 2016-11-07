@@ -286,7 +286,10 @@ a.alink {
   text-decoration: none;
   outline: inherit;
 }
-
 a.alink:hover {
   color:#928d8d;
+}
+
+h1.post-title {
+  text-align: center;
 }
