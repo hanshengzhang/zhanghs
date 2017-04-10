@@ -17,14 +17,14 @@ navigation_weight: 2
 <div class="tabcontents">
 	<div id="all_blog">
 	<ul>
-	{% for post in site.posts limits:5 %}
+	{% for post in site.posts limit:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
 	</div>
 	<div id="tech">
 	<ul>
-	{% for post in site.categories.tech limits:5 %}
+	{% for post in site.categories.tech limit:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
@@ -32,7 +32,7 @@ navigation_weight: 2
 
 	<div id="other">
 	<ul>
-	{% for post in site.categories.other limits:5 %}
+	{% for post in site.categories.other limit:5 %}
 		<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
