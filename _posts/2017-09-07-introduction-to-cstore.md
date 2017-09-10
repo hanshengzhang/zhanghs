@@ -3,63 +3,6 @@ layout: post
 category: tech
 title: 列存储数据库C-Store介绍
 ---
-<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-var empData = [
-  ["Bob", 25, "Math", "10K"],
-  ["Bill", 27, "EECS", "50K"],
-  ["Jill", 24, "Biology", "80K"],
-  ["Alice", 23, "Art", "20K"],
-  ["Jason", 28, "Physics", "30K"],
-  ["John", 27, "Chemistry", "40K"]
-];
-var deptData = [
-  ["EECS", 2], 
-  ["Math", 5],
-  ["Physics", 7],
-  ["Chemistry", 10],
-  ["Biology", 16],
-  ["Art", 24]
-];
-
-function tableShow(element, data, columnNames) {
-  element.DataTable({
-    paging:false,
-    data: data,
-    bInfo : false,
-    searching: false,
-    sorting: false,
-    columns: columnNames.map(function(x) {return {"title": x}})
-  })
-}
-
-$(document).ready(function() {
-  
-  tableShow($('#logical_emp'), empData, ["Name", "Age", "Dept", "Salary"]);
-  
-  tableShow($('#logical_dept'), deptData, ["Name", "Floor"]);
-  
-  tableShow(
-    $('#emp_proj1'), 
-    empData.map(function(x){return [x[0], x[1]];}).sort(function(x, y){return x[1]-y[1];}), 
-    ["Name", "Age"]
-  );
-  
-  var deptMap = deptData.reduce(function(map, obj) {
-    map[obj[0]] = obj[1];
-    return map;
-  }, {});
-  var proj2 = empData.map(function(x) {return [x[2], x[1], deptMap[x[2]]];}).sort(function(x, y){ return x[2]-y[2];});
-  tableShow($('#emp_proj2'), proj2, ["Dept", "Age", "DEPT.Floor"])
-  
-  tableShow(
-    $('#emp_proj3'), 
-    empData.map(function(x){return [x[0], x[3]];}).sort(function(x, y){return parseInt(x[1]) - parseInt(y[1]);}), 
-    ["Name", "Salary"]
-  );
-});
-</script>
 
 C-Store是一个为了快速查询而设计的关系型数据库，它的论文发表于2005年的VLDB。
 为了达到更快的查询性能，C-Store按列存储数据，同一个表中的不同列可能被存在不同的、可能有重叠的Projection中。
@@ -148,3 +91,62 @@ C-Store的查询优化最重要的一步是选出一组Projection。
 我认为，C-Store对分析型数据库而言，有着重要的意义。
 在C-Store以前，大家会讨论不同的数据序列适合什么样的编码，会思考如何通过Data Mirror实现查询加速，会考虑到分布式数据存储中的事务支持，但是是C-Store，将这些技术糅合在一起，设计出一个分析型的列存储关系型数据库。
 当然，从细节设计和实现上来讲，C-Store不可能说是尽善尽美，这些很多在商业产品HPE Vertica中都有改善，但我认为C-Store跨出了重要的一步，这一步不那么完美， 似乎也并不重要。
+
+<script src="/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var empData = [
+  ["Bob", 25, "Math", "10K"],
+  ["Bill", 27, "EECS", "50K"],
+  ["Jill", 24, "Biology", "80K"],
+  ["Alice", 23, "Art", "20K"],
+  ["Jason", 28, "Physics", "30K"],
+  ["John", 27, "Chemistry", "40K"]
+];
+var deptData = [
+  ["EECS", 2], 
+  ["Math", 5],
+  ["Physics", 7],
+  ["Chemistry", 10],
+  ["Biology", 16],
+  ["Art", 24]
+];
+
+function tableShow(element, data, columnNames) {
+  element.DataTable({
+    paging:false,
+    data: data,
+    bInfo : false,
+    searching: false,
+    sorting: false,
+    columns: columnNames.map(function(x) {return {"title": x}})
+  })
+}
+
+$(document).ready(function() {
+  
+  tableShow($('#logical_emp'), empData, ["Name", "Age", "Dept", "Salary"]);
+  
+  tableShow($('#logical_dept'), deptData, ["Name", "Floor"]);
+  
+  tableShow(
+    $('#emp_proj1'), 
+    empData.map(function(x){return [x[0], x[1]];}).sort(function(x, y){return x[1]-y[1];}), 
+    ["Name", "Age"]
+  );
+  
+  var deptMap = deptData.reduce(function(map, obj) {
+    map[obj[0]] = obj[1];
+    return map;
+  }, {});
+  var proj2 = empData.map(function(x) {return [x[2], x[1], deptMap[x[2]]];}).sort(function(x, y){ return x[2]-y[2];});
+  tableShow($('#emp_proj2'), proj2, ["Dept", "Age", "DEPT.Floor"])
+  
+  tableShow(
+    $('#emp_proj3'), 
+    empData.map(function(x){return [x[0], x[3]];}).sort(function(x, y){return parseInt(x[1]) - parseInt(y[1]);}), 
+    ["Name", "Salary"]
+  );
+});
+</script>
+
