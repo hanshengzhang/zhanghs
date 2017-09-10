@@ -3,7 +3,7 @@ layout: post
 category: tech
 title: 列存储数据库C-Store介绍
 ---
-<script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 var empData = [
