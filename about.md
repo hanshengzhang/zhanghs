@@ -8,10 +8,11 @@ title: Hansen先生
 ## Personal Information
 张汉生<br/>
 ZHANG, Hansheng<br/>
-Software Developer @ Ad Intelligence Team, Hulu Beijing
+Senior Software Developer @ Audience Platform, Hulu Beijing
 
 ## Internship and Employment
-- 2015.7-now Software Developer @ <a href="http://www.hulu.com">Hulu</a>
+- 2018.7-now Senior Software Developer @ <a href="http://www.hulu.com">Hulu</a>
+- 2015.7-2018.7 Software Developer @ <a href="http://www.hulu.com">Hulu</a>
 - 2015.5-2015.7 Software Developer Intern @ <a href="http://www.hulu.com">Hulu</a>
 - 2014.6-2014.8 Internship @ <a href="http://nie.163.com/en/">Netease Games</a>
 - 2013.9-2014.5 President of Tecent Innovation Club, Peking University
