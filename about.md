@@ -11,8 +11,9 @@ ZHANG, Hansheng<br/>
 Senior Software Developer @ Audience Platform, Hulu Beijing
 
 ## Internship and Employment
-- 2018.7-now Senior Software Developer @ <a href="http://www.hulu.com">Hulu</a>
-- 2015.7-2018.7 Software Developer @ <a href="http://www.hulu.com">Hulu</a>
+- 2019.3-now Senior Software Development Lead @ <a href="http://www.hulu.com">Hulu</a>
+- 2018.7-2019.2 Senior Software Developer @ <a href="http://www.hulu.com">Hulu</a>
+- 2015.7-2018.6 Software Developer @ <a href="http://www.hulu.com">Hulu</a>
 - 2015.5-2015.7 Software Developer Intern @ <a href="http://www.hulu.com">Hulu</a>
 - 2014.6-2014.8 Internship @ <a href="http://nie.163.com/en/">Netease Games</a>
 - 2013.9-2014.5 President of Tecent Innovation Club, Peking University
