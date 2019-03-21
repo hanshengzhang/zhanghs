@@ -8,7 +8,7 @@ title: Hansen先生
 ## Personal Information
 张汉生<br/>
 ZHANG, Hansheng<br/>
-Senior Software Developer @ Audience Platform, Hulu Beijing
+Senior Software Development Lead @ Audience Platform, Hulu Beijing
 
 ## Internship and Employment
 - 2019.3-now Senior Software Development Lead @ <a href="http://www.hulu.com">Hulu</a>
