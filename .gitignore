@@ -2,6 +2,7 @@
 #################
 ## Eclipse
 #################
+.jekyll-cache/
 _site
 *.pydevproject
 .project

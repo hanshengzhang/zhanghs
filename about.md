@@ -1,8 +1,8 @@
 ---
 layout: default
+title: About me - Hansheng Zhang
 navigation_weight: 3
 navigation_title: About
-title: Hansen先生
 ---
 
 ## Personal Information
