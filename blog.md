@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hansen先生的博客
+title: Blogs - Hansheng Zhang
 navigation_title: Blog
 navigation_weight: 2
 ---
