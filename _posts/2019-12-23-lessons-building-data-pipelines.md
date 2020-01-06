@@ -4,36 +4,42 @@ category: tech
 title: Lessons I learned on building data pipelines
 ---
 
-**Background.** I have built data pipelines since I started my career in 2015.
+**Background.** 
+I have built data pipelines since I started my career in 2015.
 To me, it has been a journey exploring big data knowledges and techniques.
 I need to understand the machinism behind resource management and computing frameworks.
 I need to learn how analytic databases work and how OLAP queries are executed.
-I need to know common data modeling principles and related business processes.
+I need to be familiar with common data modeling principles and the ads/marketing business processes.
 I was very into learning and practicing these techniques. 
 However, in 2017, I was asked to give a talk introducing a data mart and there was a "lessons learned" section.
 I realized that "*How to write windowing function using HQL*" might not be a good answer. 
-Since then, I started to write and adjust my answer to the following question.
+Since then, I started to maintain a list for the following question.
 
-**Question.** What lessons have I learned on building data pipelines?
+**Question.** 
+What lessons have I learned on building data pipelines?
 
-# Lesson 1: Fail as early as possible
+**Methodology.** 
+I adjust the list from time to time based on my experience of building and maintaining data pipelines.
+Locating and fixing pipeline failures accounts for the major part of it. 
+Thus, most of (if not all) these lessions are about avoiding pipeline failures.
+I've also helped several junior coworkers to build or debug their data pipelines.
+It helps a lot for me to know what lessons are useful and in which cases they are.
 
-For most data pipelines, there are several jobs reading, processing and writing data sets.
-It is not easy to find bugs in these jobs because the data sets are usually pretty large, 
-Even the bug has been located and fixed, backfilling the 
+# Lesson 1: Fail early
+
 A data pipeline could fail due to many reasons, such as software bugs, environment limitations, resource shortages and upstream changes.
+It could be very time-consuming to diagnose a data pipeline failure.
+Even when the bug has been located and fixed, sometimes you need to perform a data backfilling.
+My suggest is that if a pipeline has to fail, fail as early as possible.
 
+**Try to fail during the development.**
+Evaluate whether a static typed language should be used to avoid incorrect type definitions and castings.
+Write unit tests for complex data processing logics.
+Write integration tests before deploying the pipeline. 
 
-Development practices.
+**Validate the input and output.**
 
-Don't know how to process. Just fail early. What if passing the wrong values.
-
-Only handle the failure Emit that message. don't catch an exception. 
-
-- use static typed language.
-- write unit test.
-- write integration test.
-
+**Catch only the expected exceptions.**
 
 **Note.** There is an article named [*Fail Fast*](https://www.martinfowler.com/ieeeSoftware/failFast.pdf). 
 I didn't notice it until recently. You might find some ideas are shared.
