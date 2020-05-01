@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Blogs - Hansheng Zhang
-navigation_title: Blog
-navigation_weight: 2
 ---
 <script src="tabcontent.js" type="text/javascript"></script>
 

@@ -1,7 +1,5 @@
 ---
 layout: default
-navigation_weight: 3
-navigation_title: About
 title: About me - Hansheng Zhang
 ---
 

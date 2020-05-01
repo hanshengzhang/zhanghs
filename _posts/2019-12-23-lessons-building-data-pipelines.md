@@ -1,62 +1,32 @@
 ---
 layout: post
 category: tech
-title: Lessons I learned on building data pipelines
+title: 构建Data Pipeline的几点经验
 ---
 
-**Background.** 
-I have built data pipelines since I started my career in 2015.
-To me, it has been a journey exploring big data knowledges and techniques.
-I need to understand the machinism behind resource management and computing frameworks.
-I need to learn how analytic databases work and how OLAP queries are executed.
-I need to be familiar with common data modeling principles and the ads/marketing business processes.
-I was very into learning and practicing these techniques. 
-However, in 2017, I was asked to give a talk introducing a data mart and there was a "lessons learned" section.
-I realized that "*How to write windowing function using HQL*" might not be a good answer. 
-Since then, I started to maintain a list for the following question.
+**1. 尽早失败**
 
-**Question.** 
-What lessons have I learned on building data pipelines?
+- Pipeline可能会因为多种原因失败（挂掉、超时或没有产生预期的结果等）。
+- 在开发的过程中，语言的选择和更谨慎的类型转化可以让程序在编译时就挂掉，单元测试和集成测试也有助于让某些错误更早的产生失败。
+- 在上游失败永远是一个更好的选项。有人会说为了更早的产生数据价值和让Pipeline更稳定，部分错误可以被容忍。这种情况需要对所谓“部分错误”进行描述和建模，承诺错误率或者设计对应的再提交阶段。这“部分错误”实际是预期内的合法状态。
+- 通过一系列的监控去表述合法的输入和输出，不要尝试去处理超过已有认知的输入。
+- 千万不要吃掉“失败”，让失败悄无声息被遗漏。
+- 这里有个原则叫[*Fail Fast*](https://www.martinfowler.com/ieeeSoftware/failFast.pdf)，部分有类似之处。
 
-**Methodology.** 
-I adjust the list from time to time based on my experience of building and maintaining data pipelines.
-Locating and fixing pipeline failures accounts for the major part of it. 
-Thus, most of (if not all) these lessions are about avoiding pipeline failures.
-I've also helped several junior coworkers to build or debug their data pipelines.
-It helps a lot for me to know what lessons are useful and in which cases they are.
+**2. 拒绝魔术**
 
-# Lesson 1: Fail early
+- 一个人的已有认知给什么事情是合理的划定了一个边界，超过这个边界的叫魔术。
+- 扩大这个边界。遇到和自己的认知不相符的神奇的事情要尽量知道背后机制，例如同样跑在JVM上为什么Scala可以写，翻译成Java是什么样子的，或者为什么有些情况下查询不能优化成我想要的样子。
+- 尊重这个边界。还不清楚背后机制的“魔术”谨慎使用。
+- 有时候任务挂掉，点下重跑就正常了，也要去看下为什么，不然总有一天不管你怎么点“重跑”，Pipeline都不能恢复正常。
 
-A data pipeline could fail due to many reasons, such as software bugs, environment limitations, resource shortages and upstream changes.
-It could be very time-consuming to diagnose a data pipeline failure.
-Even when the bug has been located and fixed, sometimes you need to perform a data backfilling.
-My suggest is that if a pipeline has to fail, fail as early as possible.
+**3.描述状态**
 
-**Try to fail during the development.**
-Evaluate whether a static typed language should be used to avoid incorrect type definitions and castings.
-Write unit tests for complex data processing logics.
-Write integration tests before deploying the pipeline. 
-
-**Validate the input and output.**
-
-**Catch only the expected exceptions.**
-
-**Note.** There is an article named [*Fail Fast*](https://www.martinfowler.com/ieeeSoftware/failFast.pdf). 
-I didn't notice it until recently. You might find some ideas are shared.
-
-
-
-
-# Lesson 2: Magic is trouble (2017)
-
-- write scala codes when you know how they are compiled to Java.
-A bound it is possible. Beyond that bound.
-
-# Lesson 3: Design the states (2018)
+# 3. 描述状态 (2018)
 
 Essential. idempotence.
 
-# Lesson 4: Validate the assumptions (2018)
+# 4. 检验假设 (2018)
 
 
 

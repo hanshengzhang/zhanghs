@@ -1,0 +1,33 @@
+---
+layout: default
+title: Hansheng Zhang
+---
+
+{% for post in paginator.posts %}
+<div class="snapshot-container">
+  <div class="snapshot-header">
+    <h1 style=>
+      <a href="{{post.url}}" class="alink">
+        {{post.title}}
+      </a>
+      <span style="font-size:10pt;color:#bf6363">{{ post.date | date: "%Y-%m-%d" }} </span>
+    </h1>
+  </div>
+  <div class="snapshot-body">
+    {% if post.content contains '<!--snapshot-->' %}
+      {{ post.content | split:'<!--snapshot-->' | first }}
+    {% else %}
+      {{ post.excerpt }}
+    {% endif %}
+  </div>
+  <div><a class="alink" href="{{post.url}}">Read More</a></div>
+</div>
+{% endfor %}
+<nav id="page-nav">
+  {% if paginator.previous_page %}
+    <a class="prev alink" href="{{paginator.previous_page_path}}">« Prev</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="next alink" rel="next" href="{{paginator.next_page_path}}">Next »</a>
+  {% endif %}
+</nav>

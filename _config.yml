@@ -5,5 +5,5 @@ markdown: kramdown
 title: Zhang Hansheng
 permalink: /:year/:month/:day/:title
 paginate: 5
-paginate_path: "/page:num"
+paginate_path: "/index_old/page:num"
 plugins: [jekyll-paginate]
