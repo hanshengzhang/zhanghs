@@ -119,5 +119,5 @@ Server is ready.
 至于解决这种问题：
 
 1. 关闭Statement，是的，你的代码应该保证这一点。
-2. 或者，关闭Collection，自己定期回收JDBC的Collection或者使用Collection Pool，推荐使用。
-3. 或者，关闭Service，定期重启Service，比较彻底和完美。
+2. 或者，关闭Connection，自己定期回收JDBC的Connection或者使用Collection Pool，推荐使用。
+3. 或者，关闭Service，定期重启Service，比较彻底，但是会失去一些发现代码问题的机会。
