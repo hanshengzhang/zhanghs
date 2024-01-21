@@ -2,31 +2,11 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="/css/default.css" type="text/css" />
 	<link rel="stylesheet" href="/css/pygments_yscg.css" type="text/css"/>
 	<title>{% if page.title %} {{page.title}} {% else %} {{site.title}} {% endif %}</title>
 </head>
 <body>
 <div id="site">
-	<nav class="main-nav">
-  <ul class="main-nav-ul">
-		<li class="main-nav-item">
-			<a href="/" {% if page.url == '/index.html' %} class="nav-active" {% else %} class = "nav-normal"{% endif %}>
-				Home
-			</a>
-		</li>
-    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
-    {% for p in navigation_pages %}
-      {% if p.navigation_weight %}
-        <li class="main-nav-item">
-          <a href="{{ p.url }}" {% if p.url == page.url %} class="nav-active" {% else %} class = "nav-normal"{% endif %}>
-            {{ p.navigation_title }}
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
 	<div class="mainPage">
 		{{ content }}
 	</div>
